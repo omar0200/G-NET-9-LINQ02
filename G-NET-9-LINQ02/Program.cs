@@ -126,8 +126,14 @@
             #endregion
 
             #region Q20
-            var result = products.Take(3).Select(p => p.ProductName)
-    .Concat(customers.Take(3).Select(c => c.CompanyName));
+            //        var result = products.Take(3).Select(p => p.ProductName)
+            //.Concat(customers.Take(3).Select(c => c.CompanyName));
+            #endregion
+
+            #region Q21
+
+            var result = products.Zip(customers,
+    (p, c) => $"{p.ProductName} sold to {c.CompanyName}");
             #endregion
         }
     }
