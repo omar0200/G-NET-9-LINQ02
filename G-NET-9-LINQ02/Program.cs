@@ -13,7 +13,11 @@
                 new Product { Name = "Smartwatch", Price = 300 }
             };
             #region Q01
-            var topExpensive = products.Take(3);
+            //var topExpensive = products.Take(3);
+            #endregion
+
+            #region Q02
+            var page = products.Skip(5).Take(5);    
             #endregion
         }
     }
