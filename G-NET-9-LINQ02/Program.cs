@@ -29,9 +29,19 @@
             #endregion
 
             #region Q05
-            var numbers = new[] { 3, 9, 13, 18 };
-        var result = numbers.Contains(9);
+            //    var numbers = new[] { 3, 9, 13, 18 };
+            //var result = numbers.Contains(9);
+            #endregion
+
+            #region 06
+            var groups = products
+    .GroupBy(p => p.Category)
+    .Select(g => new {
+        Category = g.Key,
+        Count = g.Count()
+    });
             #endregion
         }
+
     }
 }
