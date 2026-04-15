@@ -17,7 +17,11 @@
             #endregion
 
             #region Q02
-            var page = products.Skip(5).Take(5);    
+            var page = products.Skip(5).Take(5);
+            #endregion
+
+            #region Q03
+            var result = products.TakeWhile(p =>p.price < 25).OrderBy(p => p.price);
             #endregion
         }
     }
