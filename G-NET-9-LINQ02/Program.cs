@@ -94,11 +94,17 @@
             #endregion
 
             #region Q14
-            string[] list1 = { "Germany", "France", "UK", "Spain" };
-            string[] list2 = { "france", "SPAIN", "Italy" };
+            //string[] list1 = { "Germany", "France", "UK", "Spain" };
+            //string[] list2 = { "france", "SPAIN", "Italy" };
 
-            var result = list1
-                .Where(c => !list2.Any(x => x.Equals(c, StringComparison.OrdinalIgnoreCase)));
+            //var result = list1
+            //    .Where(c => !list2.Any(x => x.Equals(c, StringComparison.OrdinalIgnoreCase)));
+            #endregion
+
+            #region Q15 
+            var dict = products.ToDictionary(p => p.ProductID);
+
+            var product18 = dict[18];
             #endregion
 
         }
