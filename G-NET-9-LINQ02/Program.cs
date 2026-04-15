@@ -120,9 +120,14 @@
             //.Select(x => 7 * x);
             #endregion
 
-            #region Q18
-            var evens = Enumerable.Range(1, 30)
-    .Where(x => x % 2 == 0);
+            #region Q19
+            //        var evens = Enumerable.Range(1, 30)
+            //.Where(x => x % 2 == 0);
+            #endregion
+
+            #region Q20
+            var result = products.Take(3).Select(p => p.ProductName)
+    .Concat(customers.Take(3).Select(c => c.CompanyName));
             #endregion
         }
     }
