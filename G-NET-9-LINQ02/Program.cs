@@ -43,14 +43,23 @@
             #endregion
 
             #region Q 07
-            var result = products
-    .GroupBy(p => p.Category)
-    .Select(g => new {
-        Category = g.Key,
-        Names = g.Select(p => p.ProductName)
-    });
-        }
-        #endregion
+            //        var result = products
+            //.GroupBy(p => p.Category)
+            //.Select(g => new {
+            //    Category = g.Key,
+            //    Names = g.Select(p => p.ProductName)
+            //});
+            //    }
+            #endregion
 
+            #region Q08
+            var categories = products
+    .GroupBy(p => p.Category)
+    .Where(g => g.Count() > 3)
+    .Select(g => g.Key);
+            #endregion
+
+        }
     }
+
 }
