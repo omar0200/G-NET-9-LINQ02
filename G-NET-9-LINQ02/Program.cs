@@ -53,10 +53,22 @@
             #endregion
 
             #region Q08
-            var categories = products
-    .GroupBy(p => p.Category)
-    .Where(g => g.Count() > 3)
-    .Select(g => g.Key);
+            //        var categories = products
+            //.GroupBy(p => p.Category)
+            //.Where(g => g.Count() > 3)
+            //.Select(g => g.Key);
+            #endregion
+
+            #region Q09
+            var result =
+    from c in customers
+    group c by c.Country into g
+    select new
+    {
+        Country = g.Key,
+        Count = g.Count(),
+        TotalOrderValue = g.Sum(x => x.Orders.Sum(o => o.Total))
+    };
             #endregion
 
         }
