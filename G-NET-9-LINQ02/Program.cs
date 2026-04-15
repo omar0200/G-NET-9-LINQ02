@@ -72,7 +72,12 @@
             #endregion
 
             #region Q10
-            int total = products.Sum(p => p.UnitsInStock);
+            //int total = products.Sum(p => p.UnitsInStock);
+            #endregion
+
+            #region Q11
+            var min = products.Min(p => p.UnitPrice);
+            var max = products.Max(p => p.UnitPrice);
             #endregion
 
 
