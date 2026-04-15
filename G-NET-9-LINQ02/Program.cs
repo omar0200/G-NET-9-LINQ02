@@ -60,16 +60,21 @@
             #endregion
 
             #region Q09
-            var result =
-    from c in customers
-    group c by c.Country into g
-    select new
-    {
-        Country = g.Key,
-        Count = g.Count(),
-        TotalOrderValue = g.Sum(x => x.Orders.Sum(o => o.Total))
-    };
+            //        var result =
+            //from c in customers
+            //group c by c.Country into g
+            //select new
+            //{
+            //    Country = g.Key,
+            //    Count = g.Count(),
+            //    TotalOrderValue = g.Sum(x => x.Orders.Sum(o => o.Total))
+            //};
             #endregion
+
+            #region Q10
+            int total = products.Sum(p => p.UnitsInStock);
+            #endregion
+
 
         }
     }
