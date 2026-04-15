@@ -102,9 +102,13 @@
             #endregion
 
             #region Q15 
-            var dict = products.ToDictionary(p => p.ProductID);
+            //var dict = products.ToDictionary(p => p.ProductID);
 
-            var product18 = dict[18];
+            //var product18 = dict[18];
+            #endregion
+
+            #region Q16
+            var product = products.First(p => p.UnitPrice > 50);
             #endregion
 
         }
