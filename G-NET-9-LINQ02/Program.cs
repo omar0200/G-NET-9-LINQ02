@@ -87,11 +87,20 @@
             #endregion
 
             #region Q13 
-            int[] setA = { 1, 3, 5, 7, 9, 11, 13 };
-            int[] setB = { 3, 6, 9, 12, 15, 13 };
+            //int[] setA = { 1, 3, 5, 7, 9, 11, 13 };
+            //int[] setB = { 3, 6, 9, 12, 15, 13 };
 
-            var result = setA.Except(setB);
+            //var result = setA.Except(setB);
             #endregion
+
+            #region Q14
+            string[] list1 = { "Germany", "France", "UK", "Spain" };
+            string[] list2 = { "france", "SPAIN", "Italy" };
+
+            var result = list1
+                .Where(c => !list2.Any(x => x.Equals(c, StringComparison.OrdinalIgnoreCase)));
+            #endregion
+
         }
     }
 
