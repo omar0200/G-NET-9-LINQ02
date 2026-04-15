@@ -76,10 +76,15 @@
             #endregion
 
             #region Q11
-            var min = products.Min(p => p.UnitPrice);
-            var max = products.Max(p => p.UnitPrice);
+            //var min = products.Min(p => p.UnitPrice);
+            //var max = products.Max(p => p.UnitPrice);
             #endregion
 
+            #region Q12
+            var categories = products
+    .Select(p => p.Category)
+    .Distinct();
+            #endregion
 
         }
     }
