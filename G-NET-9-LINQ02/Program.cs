@@ -21,7 +21,11 @@
             #endregion
 
             #region Q03
-            var result = products.TakeWhile(p =>p.price < 25).OrderBy(p => p.price);
+            // var result = products.TakeWhile(p =>p.price < 25).OrderBy(p => p.price);
+            #endregion
+
+            #region Q04
+            bool seafood =products.Where(p => p.Category == "Seafood").All(p => p.stock > 0);
             #endregion
         }
     }
