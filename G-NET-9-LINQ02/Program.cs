@@ -25,7 +25,12 @@
             #endregion
 
             #region Q04
-            bool seafood =products.Where(p => p.Category == "Seafood").All(p => p.stock > 0);
+            //bool seafood =products.Where(p => p.Category == "Seafood").All(p => p.stock > 0);
+            #endregion
+
+            #region Q05
+            var numbers = new[] { 3, 9, 13, 18 };
+        var result = numbers.Contains(9);
             #endregion
         }
     }
